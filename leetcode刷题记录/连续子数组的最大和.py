@@ -7,12 +7,22 @@
 """
 class Solution:
     def maxSubArray(self, nums):
-        lenth = len(nums)
-        dp = [[0]*lenth for _ in nums]
+        former = 0
+        max = nums[0]
+        for idx in range(len(nums)):
+            if idx == 0:
+                cur = nums[0]
+                former = cur
+            elif nums[idx] >= nums[idx] + former:
+                cur = nums[idx]
+            else:
+                cur = nums[idx] + former
+            if cur > max:
+                max = cur
+            former = cur
+        return max
 
-        left, right = 0, 0
-        for right in range(lenth):
-            for left in range(right):
-                if right == 0 and left == 0:
-                    dp[right][left] = nums[right]
-                else:
+
+my_solution = Solution()
+print(my_solution.maxSubArray([-1]))
+
