@@ -12,6 +12,7 @@
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
 
+
 class Solution(object):
     def removeDuplicates(self, nums):
         """
@@ -19,9 +20,8 @@ class Solution(object):
         :rtype: int
         """
         fast, slow = 1, 1
-
         for fast in range(1, len(nums)):
             if nums[fast] != nums[fast-1]:
                 nums[slow] = nums[fast]
-                slow +=1
+                slow += 1
         return slow
