@@ -24,3 +24,4 @@ class Solution:
         while (fast != slow):
             fast, slow = fast.next, slow.next
         return fast
+
