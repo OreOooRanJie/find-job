@@ -11,11 +11,12 @@ class Solution(object):
         index = 0
         for i in range(len(nums)):
             Sum += nums[i]
+            # 这里的index为左指针
             while Sum >= target:
-                res = min(res, i-index+1)
+                res = min(res, i - index + 1)
                 Sum -= nums[index]
                 index += 1
-        return 0 if res==float("inf") else res
+        return 0 if res == float("inf") else res
 
 
 if __name__ == "__main__":

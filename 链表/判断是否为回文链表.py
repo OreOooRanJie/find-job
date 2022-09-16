@@ -27,7 +27,7 @@ class Solution(object):
 
 
 if __name__ == "__main__":
-    head = ListNode(1, next=ListNode(2, next=ListNode(9, ListNode(1))))
+    head = ListNode(1, next=ListNode(2, next=ListNode(2, ListNode(1))))
     my_solution = Solution()
     my_ans = my_solution.isPalindrome(head)
     print(my_ans)
