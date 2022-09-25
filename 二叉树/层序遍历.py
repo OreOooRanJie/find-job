@@ -1,5 +1,6 @@
 from base_tree import TreeNode
 
+
 class Solution(object):
     def levelOrder(self, root):
         """
